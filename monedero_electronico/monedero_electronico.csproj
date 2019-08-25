@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E158F46-549C-4BDE-A334-8F8BFDED52D3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>monedero_electronico</RootNamespace>
+    <AssemblyName>monedero_electronico</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libreria conector mysql\v4.5.2\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libreria conector mysql\v4.5.2\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libreria conector mysql\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.EntityFramework, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libreria conector mysql\v4.5.2\MySql.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MySQL.Data.EntityFrameworkCore, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libreria conector mysql\v4.5.2\MySQL.Data.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="MySQL.Data.EntityFrameworkCore.Design, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libreria conector mysql\v4.5.2\MySQL.Data.EntityFrameworkCore.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libreria conector mysql\v4.5.2\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libreria conector mysql\v4.5.2\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="SshNet.Security.Cryptography, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libreria conector mysql\v4.5.2\SshNet.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBImagen.cs" />
+    <Compile Include="frmClientesCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientesCuenta.Designer.cs">
+      <DependentUpon>frmClientesCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imagen.cs" />
+    <Compile Include="modeloClientesCuenta.cs" />
+    <Compile Include="frmClientesAbonar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientesAbonar.Designer.cs">
+      <DependentUpon>frmClientesAbonar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modeloClientesAbonar.cs" />
+    <Compile Include="frmClientesCanjear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientesCanjear.Designer.cs">
+      <DependentUpon>frmClientesCanjear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modeloClientesCanjear.cs" />
+    <Compile Include="frmClientesMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientesMenu.Designer.cs">
+      <DependentUpon>frmClientesMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientesRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientesRegistrar.Designer.cs">
+      <DependentUpon>frmClientesRegistrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modeloClientesRegistrar.cs" />
+    <Compile Include="conexion.cs" />
+    <Compile Include="FrmConexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConexion.Designer.cs">
+      <DependentUpon>FrmConexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modeloLogin.cs" />
+    <Compile Include="frmPremioRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPremioRegistrar.Designer.cs">
+      <DependentUpon>frmPremioRegistrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modeloPremRegistrar.cs" />
+    <Compile Include="frmPremiosInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPremiosInventario.Designer.cs">
+      <DependentUpon>frmPremiosInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modeloPremInventario.cs" />
+    <Compile Include="frmPremiosMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPremiosMenu.Designer.cs">
+      <DependentUpon>frmPremiosMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmReloj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReloj.Designer.cs">
+      <DependentUpon>frmReloj.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmClientesCuenta.resx">
+      <DependentUpon>frmClientesCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientesAbonar.resx">
+      <DependentUpon>frmClientesAbonar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientesCanjear.resx">
+      <DependentUpon>frmClientesCanjear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientesMenu.resx">
+      <DependentUpon>frmClientesMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientesRegistrar.resx">
+      <DependentUpon>frmClientesRegistrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConexion.resx">
+      <DependentUpon>FrmConexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPremioRegistrar.resx">
+      <DependentUpon>frmPremioRegistrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPremiosInventario.resx">
+      <DependentUpon>frmPremiosInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPremiosMenu.resx">
+      <DependentUpon>frmPremiosMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmReloj.resx">
+      <DependentUpon>frmReloj.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NewFile1.txt" />
+    <Content Include="NewFile2.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
